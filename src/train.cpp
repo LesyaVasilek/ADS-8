@@ -58,5 +58,7 @@ while (cage) {
 return 0;
 }
 int Train::getOpCount() {
+      if (countOp == 0)
+          getLength();
     return countOp;
 }
