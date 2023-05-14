@@ -10,8 +10,7 @@ void Train::addCage(bool light) {
         first->prev = nullptr;
         first->next = nullptr;
         first->light = true;
-    }
-    else if (first != nullptr) {
+    } else if (first != nullptr) {
         Cage* cage = new Cage;
         cage->next = nullptr;
         cage->prev = nullptr;
@@ -22,8 +21,7 @@ void Train::addCage(bool light) {
             cage->prev = first;
             first->next = cage;
             first->prev = cage;
-        }
-        else {
+        } else {
             tmp = first;
             while (tmp->next != first) {
                 tmp = tmp->next;
@@ -48,10 +46,11 @@ while (cage) {
             cage = cage->prev;
             countOp++;
         }
-        if (cage->light == 0)
+        if (cage->light == 0) {
             if (cage->light == 0) {
                 return result;
             }
+        }
         result = 0;
     }
 }
